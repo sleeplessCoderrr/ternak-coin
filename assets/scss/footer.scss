@@ -1,2 +1,36 @@
 @use '../scss/variabel';
 
+footer {
+    @include variabel.mar-pad;
+}
+
+#footer{
+    @include variabel.flex-row;
+    justify-content: space-evenly;
+    margin-bottom: 78px;
+}
+
+#footer .footer-img img {
+    width: 213px;
+    height: 46px;
+}
+
+#footer ul {
+    @include variabel.flex-column;
+    list-style: none;
+    @include variabel.mar-pad;
+    @include variabel.text;
+    gap: 10px
+}
+
+#footer label{
+    @include variabel.button;
+}
+
+.copyright{
+    @include variabel.flex-column;
+    justify-content: center;
+    text-align: center;
+    @include variabel.text;
+    margin-bottom: 34px;
+}
