@@ -66,9 +66,11 @@ main{
     align-items: center;
     gap: 80px;
     width: 1364px;
-    height: 368px;
+    height: 380px;
+    padding: 0px 24px;
     background-image: url("/assets/resources/img/games-indo-carousel.png");
     background-size: cover;
+    border-radius: 24px;
 }
 
 #games-indo .text-games h1{
@@ -77,44 +79,44 @@ main{
 }
 
 #carousel {
-    @include variabel.flex-row;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-    transition: transform 0.5s ease-in-out;
+    width: 80%;
+    overflow: hidden;
+    margin: 10px 0px;
 }
-  
-.carousel-item {
-    @include variabel.flex-column;
-    justify-content: center;
-    align-items: center;
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.game-item {
+    margin-right: 20px; 
+    text-align: center; 
     box-sizing: border-box;
-    flex-shrink: 0;
-    background-color: variabel.$white;
-    border-radius: 32px;
-}
-  
-.carousel-caption {
+    padding: 0px;
     @include variabel.flex-column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    background-color: variabel.$white;
+    border-radius: 28px;
+}
+
+.game-item h3 {
+    @include variabel.button;
     color: variabel.$dark;
-    padding: 10px;
-}
-
-.carousel-caption h5{
-    @include variabel.h4;
+    font-size: 24px;
     margin: 10px 0px;
 }
 
-.carousel-caption p{
+.game-item p {
     @include variabel.text;
-    margin: 10px 0px;
+    color: variabel.$dark;
+    margin: 10px 0px ;
     background-color: #D9D9D9;
+    padding: 10px 20px;
     border-radius: 24px;
-    padding: 5px;
-    text-align: center;
-    margin-left: 10px;
 }
+
+
+
+
   
