@@ -20,11 +20,13 @@ footer {
     list-style: none;
     @include variabel.mar-pad;
     @include variabel.text;
-    gap: 10px
+    gap: 10px;
+    color: variabel.$dark;
 }
 
 #footer label{
     @include variabel.button;
+    color: variabel.$dark;
 }
 
 .copyright{
@@ -33,4 +35,5 @@ footer {
     text-align: center;
     @include variabel.text;
     margin-bottom: 34px;
+    color: variabel.$dark;
 }
