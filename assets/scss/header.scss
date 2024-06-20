@@ -24,12 +24,14 @@ header {
 
 .nav-right {
     @include variabel.flex-row;
+    height: 32px
 }
 
 .nav-right .nav-text {
     @include variabel.flex-row;
     color: variabel.$dark;
     margin-right: 30px;
+    align-items: center
 }
 
 .nav-right .nav-text li {
@@ -43,3 +45,32 @@ header {
     margin: 0 15px;
 }
 
+.nav-right .nav-text a:hover {
+    border-bottom: 4px solid variabel.$blue;
+}
+
+.nav-right button{
+    @include variabel.mar-pad;
+}
+
+.nav-right #sign-in{
+    @include variabel.button;
+    background-color: variabel.$light_blue;
+    color: variabel.$blue;
+    border: 1px solid variabel.$blue;
+    padding: 5px 15px;
+    border-radius: 24px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.nav-right #sign-up{
+    @include variabel.button;
+    background-color: variabel.$blue;
+    color: variabel.$white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 24px;
+    text-align: center;
+    margin-right: 30px;
+}
