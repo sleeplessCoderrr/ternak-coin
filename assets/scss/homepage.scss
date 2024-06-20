@@ -285,3 +285,117 @@ main{
     color: variabel.$dark;
     margin: 24px;
 }
+
+/* Media Queries for Responsiveness */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    #hero-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #hero-section img {
+        width: 100%;
+        max-width: 715px;
+        height: auto;
+    }
+
+    #games-indo {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+    }
+
+    #carousel {
+        width: 90%;
+    }
+
+    .game-item {
+        margin-right: 10px;
+    }
+
+    #how-works .item-how {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #how-works .item-how img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .item-rewards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .item-testimonials {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonial {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* Phone */
+@media (max-width: 768px) {
+    #hero-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    #hero-section img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    #games-indo {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #carousel {
+        width: 100%;
+    }
+
+    .game-item {
+        margin-right: 5px;
+    }
+
+    #how-works .item-how {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    #how-works .item-how img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .item-rewards {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .item-testimonials {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .testimonial {
+        width: 100%;
+        max-width: 300px;
+    }
+}
