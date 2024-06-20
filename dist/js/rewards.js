@@ -68,7 +68,7 @@ function displayRewardz(container, rewards) {
         const rewardItem = document.createElement("div");
         rewardItem.classList.add("reward-item");
         rewardItem.innerHTML = `
-            <img src="${element.img}" alt="reward">
+            <a href="/pages/nike.html"><img src="${element.img}" alt="reward">
             <h3>${element.title}</h3>
             <div class="reward-info">
                 <p>${element.reward}</p>
