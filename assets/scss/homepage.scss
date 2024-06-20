@@ -1,6 +1,120 @@
 @use '../scss/variabel';
 
-
 body {
     @include variabel.mar-pad;
+    background-image: url("/assets/resources/img/site-background.png");
+    background-size: cover;
 }
+
+main{
+    @include variabel.flex-column;
+    justify-content: center;
+    align-items: center
+}
+
+#hero-section{
+    @include variabel.flex-row;
+    margin-bottom: 10px;
+}
+
+#hero-section .content-left{
+    @include variabel.flex-column;
+    justify-content: center;
+    align-items: start;
+    max-width: 514px;
+}
+
+#hero-section .content-left h1{
+    @include variabel.h1;
+    color: variabel.$dark;
+    max-width: 300px;
+    margin: 15px 0px;
+}
+
+#hero-section .content-left p{
+    @include variabel.text;
+    color: variabel.$dark;
+    margin:0px;
+}
+
+#hero-section .content-left button{
+    @include variabel.button;
+    background-color: variabel.$blue;
+    color: variabel.$white;
+    border: 1px solid variabel.$blue;
+    border-radius: 24px;
+    padding: 10px 20px;
+    margin: 15px 0px;
+}
+
+#hero-section img{
+    width: 715px;
+    height: 478px;
+}
+
+.line{
+    width: 95%;
+    height: 4px;
+    background-color: variabel.$white;
+    border-radius: 24px;
+    margin: 75px;
+}
+
+#games-indo{
+    @include variabel.flex-row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    width: 1364px;
+    height: 368px;
+    background-image: url("/assets/resources/img/games-indo-carousel.png");
+    background-size: cover;
+}
+
+#games-indo .text-games h1{
+    @include variabel.h1;
+    color: variabel.$white;
+}
+
+#carousel {
+    @include variabel.flex-row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.carousel-item {
+    @include variabel.flex-column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    background-color: variabel.$white;
+    border-radius: 32px;
+}
+  
+.carousel-caption {
+    @include variabel.flex-column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: variabel.$dark;
+    padding: 10px;
+}
+
+.carousel-caption h5{
+    @include variabel.h4;
+    margin: 10px 0px;
+}
+
+.carousel-caption p{
+    @include variabel.text;
+    margin: 10px 0px;
+    background-color: #D9D9D9;
+    border-radius: 24px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 10px;
+}
+  
