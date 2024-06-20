@@ -1,0 +1,161 @@
+@use '../scss/variabel';
+
+body {
+    @include variabel.mar-pad;
+    background-image: url("/assets/resources/img/site-background.png");
+    background-size: cover;
+}
+
+main{
+    @include variabel.flex-column;
+    justify-content: center;
+    align-items: center
+}
+
+#hero{
+    @include variabel.flex-row;
+    margin-bottom: 80px;
+}
+
+#hero .text{
+    @include variabel.flex-column;
+    justify-content: center;
+    align-items: start;
+}
+
+#hero .text h1{
+    @include variabel.h1;
+    color: variabel.$dark;
+    max-width: 300px;
+    margin: 15px 0px;
+}
+
+#hero .text h3{
+    @include variabel.h3;
+    color: variabel.$dark;
+    margin:5px 0px;
+}
+
+#hero .text button{
+    @include variabel.button;
+    background-color: variabel.$blue;
+    color: variabel.$white;
+    border: 1px solid variabel.$blue;
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin: 15px 0px;
+}
+
+#items {
+    @include variabel.flex-row;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+#pod {
+    @include variabel.flex-row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 80px;
+    background-color: variabel.$blue;
+    padding: 30px 60px;
+    border-radius: 4px;
+}
+
+#pod .text-pod{
+    @include variabel.flex-column;
+    justify-content: center;
+    align-items: start;
+    max-width: 300px;
+}
+
+#pod .text-pod h3{
+    @include variabel.h3;
+    color: variabel.$white;
+    margin: 10px 0px;
+}
+
+#pod .text-pod p{
+    @include variabel.text;
+    color: variabel.$white;
+    margin: 0px;
+}
+
+#our-prod{
+    @include variabel.flex-column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+#our-prod .top-text{
+    @include variabel.flex-row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 900px;
+}
+
+#our-prod .top-text h1{
+    @include variabel.h1;
+    color: variabel.$dark;
+    margin: 0px;
+}
+
+#our-prod .top-text p{
+    @include variabel.text;
+    color: variabel.$dark;
+    margin: 0px;
+}
+
+#our-prod .line{
+    width: 100%;
+    height: 1px;
+    background-color: variabel.$dark;
+    margin-bottom: 20px;
+}
+
+#our-prod .item-rewardz{
+    @include variabel.flex-row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    text-align: start;
+}
+
+#our-prod .item-rewardz .reward-info{
+    @include variabel.flex-row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+#our-prod .item-rewardz h3{
+    @include variabel.h4;
+    color: variabel.$dark;
+    margin: 0px;
+    margin-left: 5px;
+}
+
+#our-prod .item-rewardz p{
+    @include variabel.text;
+    color: variabel.$dark;
+    margin: 0px;
+    margin-left: 5px;
+}
+
+#our-prod .item-rewardz .p-rewa{
+    background-color: variabel.$dark;
+    border-radius: 24px;
+    color: variabel.$white;
+    padding: 2px 5px;
+}
+
+#lastSection{
+    @include variabel.flex-column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
