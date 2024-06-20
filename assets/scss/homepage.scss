@@ -1,0 +1,6 @@
+@use '../scss/variabel';
+
+
+body {
+    @include variabel.mar-pad;
+}

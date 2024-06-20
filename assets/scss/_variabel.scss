@@ -1,0 +1,62 @@
+/*Color*/
+$yellow: #FFF9D0;
+$while_blue: #D3F0FF;
+$light_blue: #A0DEFF;
+$blue: #5AB2FF;
+$white: #FEFEFE;
+$dark: #3A3A3A;
+
+/*Font*/
+$font: 'Inter', sans-serif;
+@mixin title {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 64px;
+}
+@mixin h1 {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 48px;
+}
+@mixin h2 {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 32px;
+}
+@mixin h3 {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 28px;
+}
+@mixin h4 {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 20px;
+}
+@mixin subheading {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 24px;
+}
+@mixin button {
+    font-family: $font;
+    font-weight: 700;
+    font-size: 20px;
+}
+@mixin text {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 16px;
+}
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin mar-pad {
+    margin: 0%;
+    padding: 0%;
+}

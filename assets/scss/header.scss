@@ -1,0 +1,45 @@
+@use '../scss/variabel';
+
+header {
+    @include variabel.mar-pad;
+}
+
+#navbar{
+    @include variabel.flex-row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 27px 34px;
+    height: 110px;
+}
+
+.nav-img{
+    @include variabel.mar-pad;
+    @include variabel.flex-row;
+}
+
+.nav-img img {
+    width: 213px;
+    height: 46px;
+}
+
+.nav-right {
+    @include variabel.flex-row;
+}
+
+.nav-right .nav-text {
+    @include variabel.flex-row;
+    color: variabel.$dark;
+    margin-right: 30px;
+}
+
+.nav-right .nav-text li {
+    @include variabel.button;
+    list-style: none;
+}
+
+.nav-right .nav-text a {
+    text-decoration: none;
+    color: variabel.$dark;
+    margin: 0 15px;
+}
+
