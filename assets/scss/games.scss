@@ -16,9 +16,7 @@ body {
     @include variabel.flex-row;
     justify-content: center;
     align-items: center;
-    margin: 10px 0px;
     margin-bottom: 45px;
-    margin-left: 38px;
 }
 
 #hero-section .genre ul{
@@ -143,6 +141,7 @@ body {
     background-size: cover;
     border-radius: 24px;
     margin: 0px auto;
+    margin-bottom: 120px;
 }
 
 #games-indo .text-games h1{
@@ -192,7 +191,7 @@ body {
     @include variabel.flex-column;
     justify-content: flex-start;
     align-items: start;
-    margin-bottom: 200px;
+    margin-bottom: 120px;
 }
 
 #top-charts .type{
@@ -243,3 +242,41 @@ body {
     margin: 0px auto;
 }
 
+.game-itemz {
+    margin-right: 20px; 
+    text-align: center; 
+    box-sizing: border-box;
+    padding: 0px;
+    @include variabel.flex-column;
+    align-items: center;
+    background-color: variabel.$white;
+    border-radius: 28px;
+    box-shadow:  0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-itemz h3 {
+    @include variabel.h4;
+    color: variabel.$dark;
+    font-size: 24px;
+    margin: 10px 0px;
+}
+
+.game-itemz p {
+    @include variabel.text;
+    color: variabel.$dark;
+    margin: 10px 0px ;
+    background-color: #D9D9D9;
+    padding: 10px 20px;
+    border-radius: 24px;
+}
+
+#gameList{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px;
+    gap: 80px;
+    width: 1364px;
+    padding: 0px 24px;
+    margin: 0px auto;
+    margin-bottom: 120px;
+}
