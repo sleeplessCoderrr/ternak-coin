@@ -2,7 +2,7 @@
 .about {
     text-align: center;
     padding: 2em 0;
-    background-image: url('image/211.png');
+    background-image: url('/assets/resources/img/image\ 211.png');
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff; /* Ensure text is readable over the background */
