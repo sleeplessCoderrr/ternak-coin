@@ -1,13 +1,17 @@
-export async function getData(jsonUrl:string): Promise<JSON>{
+export async function getData(jsonUrl: string): Promise<any> {
     try {
         const response = await fetch(jsonUrl);
-        if(!response.ok) console.log("Failed fetching");
+        if (!response.ok) {
+            console.log("Failed fetching");
+            return null;
+        }
 
-        const data = await response.json();
+        const data: any = await response.json();
         return data;
     } catch (error) {
-        throw(error);
+        console.error("Error fetching data:", error);
+        return null; 
     }
 }
 
-export default(getData);
+export default getData;
