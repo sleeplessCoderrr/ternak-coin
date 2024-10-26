@@ -1,0 +1,48 @@
+{
+  "how_it_works": [
+    {
+      "img": "../assets/resources/illustration/sign_up.svg",
+      "title": "Sign Up",
+      "text": "Create your account"
+    },
+    {
+      "img": "../assets/resources/illustration/gaming.svg",
+      "title": "Play Games",
+      "text": "Choose from our exciting collection"
+    },
+    {
+      "img": "../assets/resources/illustration/coin.svg",
+      "title": "Earn Coins",
+      "text": "Get rewarded for playing"
+    },
+    {
+      "img": "../assets/resources/illustration/gifts.svg",
+      "title": "Redeem Rewards",
+      "text": "Exchange coins for awesome items"
+    }
+  ],
+
+  "item_list": [
+    { "link": "../assets/resources/element/Cear.png" },
+    { "link": "../assets/resources/element/Cgame.png" },
+    { "link": "../assets/resources/element/Claptop.png" },
+    { "link": "../assets/resources/element/Cphone.png" },
+    { "link": "../assets/resources/element/Cshoes.png" },
+    { "link": "../assets/resources/element/Cwatcj.png" }
+  ],
+
+  "testimonials" : [
+    {
+      "text": "“Ternak Coin is amazing! Fun games and real rewards. Highly recommended!”",
+      "img": "../assets/resources/element/yupen.png"
+    },
+    {
+      "text": "“Hooked since day one. Great games and community. Love it!”",
+      "img": "../assets/resources/element/kayla.png"
+    },
+    {
+      "text": "“Best gaming platform ever! Fun and rewarding experience.”",
+      "img": "../assets/resources/element/mici.png"
+    }
+  ]
+}

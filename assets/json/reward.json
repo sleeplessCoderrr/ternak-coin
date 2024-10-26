@@ -1,0 +1,28 @@
+{
+  "rewards" : [
+    {
+      "img": "../assets/resources/img/sepatu.png",
+      "title": "Nike Air Force 1 React",
+      "reward": "Shoes",
+      "poin": "10"
+    },
+    {
+      "img": "../assets/resources/img/laptop.png",
+      "title": "Asus ROG Strix G15",
+      "reward": "Laptop",
+      "poin": "10"
+    },
+    {
+      "img": "../assets/resources/img/earphone.png",
+      "title": "NGWM 01 Mini Wireless",
+      "reward": "EarBud",
+      "poin": "10"
+    },
+    {
+      "img": "../assets/resources/img/jam.png",
+      "title": "SKMEI Smartwatch",
+      "reward": "Smart Watch",
+      "poin": "10"
+    }
+  ]
+}
