@@ -1,3 +1,13 @@
 export interface BannerCollection {
-    images: string[];
+    image: string[];
+}
+
+export interface Game {
+    image: string;
+    title: string;
+    reward: number;
+}
+
+export interface GameCollection {
+    games: Game[];
 }
