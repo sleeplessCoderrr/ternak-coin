@@ -17,7 +17,7 @@ namespace GameBanner {
 
     function slider(container:Element | null, img:string[], indexes:number) {
         showSlide(container, img, indexes);
-    
+
         setInterval(() => {
             indexes = (indexes + 1) % img.length;
             showSlide(container, img, indexes);

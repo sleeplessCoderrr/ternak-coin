@@ -11,3 +11,10 @@ export interface Game {
 export interface GameCollection {
     games: Game[];
 }
+
+export interface Reward {
+    image: string;
+    title: string;
+    reward: string;
+    point: number;
+}

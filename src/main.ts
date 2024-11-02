@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const currentPage = document.body.dataset.page; 
     switch (currentPage) {
         case "games":
-            GamePage.intialize();
+            GamePage.initialize();
             break;
         // case "about":
         //     AboutPage.initialize();

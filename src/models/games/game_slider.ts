@@ -62,8 +62,7 @@ namespace GameSlider{
         const offset = -indexes * itemWidth;
         (container as HTMLElement).style.transform = `translateX(${offset}px)`;
     }
-
-
 }
 
 export default GameSlider;
+
