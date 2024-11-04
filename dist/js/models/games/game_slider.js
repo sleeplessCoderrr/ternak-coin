@@ -21,9 +21,8 @@ var GameSlider;
             const jsonUrl = '../../assets/json/games.json';
             let indexes = 0;
             const data = yield (0, fetch_1.default)(jsonUrl);
-            if (data && data.games) {
-                console.log(data.games);
-                start(gamePlace, data.games);
+            if (data && gamePlace) {
+                start(gamePlace, data);
             }
             else {
                 console.log("Failed loading images");
