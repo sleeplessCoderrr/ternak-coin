@@ -1,4 +1,3 @@
-import { GameCollection } from "../types";
 import { Game } from "../types";
 import getData from "../../utils/fetch";
 
@@ -8,16 +7,15 @@ namespace GameSlider{
         const jsonUrl:string = '../../assets/json/games.json';
         let indexes : number = 0;
 
-        const data:GameCollection | null = await getData(jsonUrl);
-        if(data && data.games){
-            console.log(data.games)
-            start(gamePlace, data.games);
+        const data:Game[] | null = await getData(jsonUrl);
+        if(data && gamePlace){
+            start(gamePlace, data);
         } else {
             console.log("Failed loading images")
         }
     }
 
-    function start(container:Element | null, games:Game[]){
+    function start(container:Element, games:Game[]){
         const dir = 1;
 
         displayGames(container, games);
@@ -44,7 +42,7 @@ namespace GameSlider{
     }
 
     let indexes = 0;
-    function slider(container:Element | null, direction:number){
+    function slider(container:Element, direction:number){
         if(!container) return;
 
         const items = container.querySelectorAll(".game-item");

@@ -18,11 +18,8 @@ var GameBanner;
             const jsonUrl = '../../assets/json/banner_images.json';
             let indexes = 0;
             const data = yield (0, fetch_1.getData)(jsonUrl);
-            if (data && data.image) {
-                slider(heroPlace, data.image, indexes);
-            }
-            else {
-                console.log("Failed loading images");
+            if (data && heroPlace) {
+                slider(heroPlace, data, indexes);
             }
         });
     }
@@ -35,15 +32,13 @@ var GameBanner;
         }, 3000);
     }
     function showSlide(container, img, indexes) {
-        if (container) {
-            container.innerHTML = '';
-            const div = document.createElement('div');
-            div.classList.add('hero-game');
-            div.innerHTML = `
-                <img src="${img[indexes]}" alt="games">
-            `;
-            container.appendChild(div);
-        }
+        container.innerHTML = '';
+        const div = document.createElement('div');
+        div.classList.add('hero-game');
+        div.innerHTML = `
+            <img src="${img[indexes]}" alt="games">
+        `;
+        container.appendChild(div);
     }
 })(GameBanner || (GameBanner = {}));
 exports.default = GameBanner;

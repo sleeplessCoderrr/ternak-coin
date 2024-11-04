@@ -1,7 +1,7 @@
 import getData from "../../utils/fetch";
 import { Reward } from "../types";
 
-export namespace RewardBanner{
+namespace RewardBanner{
     export async function showReward(){
         const rewardPlace:Element | null = document.querySelector('.item-rewards');
         const jsonUrl = '../../assets/json/reward.json';
@@ -25,3 +25,5 @@ export namespace RewardBanner{
         });
     }
 }
+
+export default RewardBanner;
