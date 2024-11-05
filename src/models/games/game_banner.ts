@@ -7,9 +7,9 @@ export namespace GameBanner {
         const jsonUrl = '../../assets/json/banner_images.json'
         let indexes : number = 0;
 
-        const data:Banner[] | null = await getData(jsonUrl);
+        const data = await getData<{images:Banner[]}>(jsonUrl);
         if(data && heroPlace){
-            slider(heroPlace, data, indexes);
+            slider(heroPlace, data.images, indexes);
         } 
     }
 

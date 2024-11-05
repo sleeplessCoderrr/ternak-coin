@@ -7,7 +7,7 @@ export var GameBanner;
         let indexes = 0;
         const data = await getData(jsonUrl);
         if (data && heroPlace) {
-            slider(heroPlace, data, indexes);
+            slider(heroPlace, data.images, indexes);
         }
     }
     GameBanner.showBanner = showBanner;
