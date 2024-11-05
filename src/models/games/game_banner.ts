@@ -1,7 +1,7 @@
-import { Banner } from '../types';
-import { getData }  from '../../utils/fetch';
+import { Banner } from '../types.js';
+import { getData }  from '../../utils/fetch.js';
 
-namespace GameBanner {
+export namespace GameBanner {
     export async function showBanner (){
         const heroPlace : Element | null = document.querySelector('.banner');
         const jsonUrl = '../../assets/json/banner_images.json'
@@ -34,4 +34,3 @@ namespace GameBanner {
 
 }
 
-export default GameBanner;

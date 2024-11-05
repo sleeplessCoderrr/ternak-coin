@@ -1,5 +1,5 @@
 export function placeNavbar(){
-    const navPlace = document.querySelector(".nav-place");
+    const navPlace = document.getElementById("nav-place");
     if(navPlace){
         navPlace.appendChild(getNavbar());
     }
@@ -7,19 +7,20 @@ export function placeNavbar(){
 
 function getNavbar(){
     const navbar = document.createElement("nav");
-    navbar.classList.add("navbar");
+    navbar.id = "navbar";
     navbar.innerHTML = `
-        <div class="nav-logo">
-            <img src="../../assets/images/logo.png" alt="logo">
+        <div class="nav-img">
+            <img src="/assets/resources/element/Logo.svg" alt="Ternak Coin Logo">
         </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="nav-right">
+            <ul class="nav-text">
+                <li><a href="/pages/homepage.html">Home</a></li>
+                <li><a href="/pages/gamesUser.html">Games</a></li>
+                <li><a href="/pages/storeUser.html">Store</a></li>
+                <li><a href="/pages/about_us.html">About Us</a></li>
+            </ul>
+        </div>
     `;
     return navbar;
 }
 
-export default placeNavbar;

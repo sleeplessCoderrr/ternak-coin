@@ -1,5 +1,5 @@
-import { Game } from "../types";
-import getData from "../../utils/fetch";
+import { Game } from "../types.js";
+import { getData } from "../../utils/fetch.js";
 
 namespace TopChart{
     export async function showTopChart(){

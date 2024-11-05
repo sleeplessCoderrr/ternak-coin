@@ -1,33 +1,17 @@
-"use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const fetch_1 = __importDefault(require("../../utils/fetch"));
-var GameSlider;
+import { getData } from "../../utils/fetch.js";
+export var GameSlider;
 (function (GameSlider) {
-    function showSlider() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const gamePlace = document.getElementById("itemContainer");
-            const jsonUrl = '../../assets/json/games.json';
-            let indexes = 0;
-            const data = yield (0, fetch_1.default)(jsonUrl);
-            if (data && gamePlace) {
-                start(gamePlace, data);
-            }
-            else {
-                console.log("Failed loading images");
-            }
-        });
+    async function showSlider() {
+        const gamePlace = document.getElementById("itemContainer");
+        const jsonUrl = '../../assets/json/games.json';
+        let indexes = 0;
+        const data = await getData(jsonUrl);
+        if (data && gamePlace) {
+            start(gamePlace, data.game_collections2);
+        }
+        else {
+            console.log("Failed loading images");
+        }
     }
     GameSlider.showSlider = showSlider;
     function start(container, games) {
@@ -70,4 +54,3 @@ var GameSlider;
         container.style.transform = `translateX(${offset}px)`;
     }
 })(GameSlider || (GameSlider = {}));
-exports.default = GameSlider;

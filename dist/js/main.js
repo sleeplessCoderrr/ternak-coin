@@ -1,19 +1,34 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const game_page_1 = __importDefault(require("./pages/game_page"));
+import { placeFooter } from "./models/footer/footer.js";
+import { placeNavbar } from "./models/navbar/navbar.js";
+import { GamePage } from "./pages/game_page.js";
+import { HomePage } from "./pages/home_page.js";
+let isNavbarRendered = false;
+let isFooterRendered = false;
+let isGamePageInitialized = false;
+let isHomeInitialized = false;
 document.addEventListener("DOMContentLoaded", () => {
-    //!!!!!needed to add the dataset in each page
+    if (!isNavbarRendered) {
+        placeNavbar();
+        isNavbarRendered = true;
+    }
+    if (!isFooterRendered) {
+        placeFooter();
+        isFooterRendered = true;
+    }
     const currentPage = document.body.dataset.page;
     switch (currentPage) {
         case "games":
-            game_page_1.default.initialize();
+            if (!isGamePageInitialized) {
+                GamePage.initialize();
+                isGamePageInitialized = true;
+            }
             break;
-        // case "about":
-        //     AboutPage.initialize();
-        //     break;
+        case "home":
+            if (!isHomeInitialized) {
+                HomePage.initialize();
+                isHomeInitialized = true;
+            }
+            break;
         default:
             console.error("Page not recognized");
     }

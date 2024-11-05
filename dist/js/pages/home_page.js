@@ -1,9 +1,14 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.HomePage = void 0;
-var HomePage;
+import { GameSlider } from "../models/games/game_slider.js";
+import { HowItWorks } from "../models/misc/how_it_works.js";
+import { Testimonials } from "../models/misc/testimonials.js";
+import { RewardBanner } from "../models/reward/reward_banner.js";
+export var HomePage;
 (function (HomePage) {
     function initialize() {
+        GameSlider.showSlider();
+        HowItWorks.showHowItWorks();
+        RewardBanner.showReward();
+        Testimonials.showTestimonials();
     }
     HomePage.initialize = initialize;
-})(HomePage || (exports.HomePage = HomePage = {}));
+})(HomePage || (HomePage = {}));

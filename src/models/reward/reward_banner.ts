@@ -1,14 +1,14 @@
-import getData from "../../utils/fetch";
-import { Reward } from "../types";
+import { getData }  from "../../utils/fetch.js";
+import { Reward } from "../types.js";
 
-namespace RewardBanner{
+export namespace RewardBanner{
     export async function showReward(){
         const rewardPlace:Element | null = document.querySelector('.item-rewards');
         const jsonUrl = '../../assets/json/reward.json';
 
-        const data:Reward[] | null = await getData(jsonUrl);
+        const data = await getData<{rewards:Reward[]}>(jsonUrl);
         if(data && rewardPlace){
-            displayRewards(rewardPlace, data);
+            displayRewards(rewardPlace, data.rewards);
         }
     }
 
@@ -26,4 +26,3 @@ namespace RewardBanner{
     }
 }
 
-export default RewardBanner;

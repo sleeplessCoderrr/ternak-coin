@@ -1,14 +1,14 @@
-import { Testimonial } from "../types";
-import getData from "../../utils/fetch";
+import { Testimonial } from "../types.js";
+import { getData }  from "../../utils/fetch.js";
 
-namespace Testimonials{
+export namespace Testimonials{
     export async function showTestimonials(){
         const testimonialPlace:Element | null = document.querySelector('.item-testimonials');
         const jsonUrl = '../../assets/json/misc.json';
 
-        const data:Testimonial[] | null = await getData(jsonUrl);
+        const data = await getData<{testimonials:Testimonial[]}>(jsonUrl);
         if(data && testimonialPlace){
-            display(testimonialPlace, data);
+            display(testimonialPlace, data.testimonials);
         }
     }
 
@@ -25,4 +25,3 @@ namespace Testimonials{
     }
 }
 
-export default Testimonials;

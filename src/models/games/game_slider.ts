@@ -1,15 +1,16 @@
-import { Game } from "../types";
-import getData from "../../utils/fetch";
+import { Game } from "../types.js";
+import { getData } from "../../utils/fetch.js";
 
-namespace GameSlider{
+export namespace GameSlider{
     export async function showSlider(){
         const gamePlace: Element | null = document.getElementById("itemContainer");
         const jsonUrl:string = '../../assets/json/games.json';
         let indexes : number = 0;
 
-        const data:Game[] | null = await getData(jsonUrl);
+        
+        const data = await getData<{game_collections2:Game[]}>(jsonUrl);
         if(data && gamePlace){
-            start(gamePlace, data);
+            start(gamePlace, data.game_collections2);
         } else {
             console.log("Failed loading images")
         }
@@ -62,5 +63,4 @@ namespace GameSlider{
     }
 }
 
-export default GameSlider;
 
