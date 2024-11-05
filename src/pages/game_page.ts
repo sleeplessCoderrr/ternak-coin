@@ -1,12 +1,10 @@
-import GameBanner from "../models/games/game_banner";
-import GameSlider from "../models/games/game_slider";
+import { GameBanner } from "../models/games/game_banner.js";
+import { GameSlider } from "../models/games/game_slider.js";
 
-namespace GamePage {
+export namespace GamePage {
     export function initialize(){
         GameBanner.showBanner();
         GameSlider.showSlider();
     }
-
 }
 
-export default GamePage;

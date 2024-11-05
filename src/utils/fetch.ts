@@ -1,4 +1,4 @@
-export async function getData(jsonUrl: string): Promise<any> {
+export async function getData<T>(jsonUrl: string): Promise<T | null> {
     try {
         const response = await fetch(jsonUrl);
         if (!response.ok) {
@@ -6,7 +6,7 @@ export async function getData(jsonUrl: string): Promise<any> {
             return null;
         }
 
-        const data: any = await response.json();
+        const data: T = await response.json();
         return data;
     } catch (error) {
         console.error("Error fetching data:", error);
@@ -14,4 +14,3 @@ export async function getData(jsonUrl: string): Promise<any> {
     }
 }
 
-export default getData;

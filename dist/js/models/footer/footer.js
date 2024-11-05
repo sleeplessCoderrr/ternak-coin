@@ -1,11 +1,10 @@
-export function placeFooter(){
+export function placeFooter() {
     const footerPlace = document.querySelector("body");
-    if(footerPlace){
+    if (footerPlace) {
         footerPlace.appendChild(getFooter());
     }
 }
-
-function getFooter(){
+function getFooter() {
     const footer = document.createElement("div");
     footer.id = "fot";
     footer.innerHTML = `
@@ -37,4 +36,3 @@ function getFooter(){
     `;
     return footer;
 }
-

@@ -1,14 +1,14 @@
-import getData from "../../utils/fetch";
-import { Tutor } from "../types";
+import { getData } from "../../utils/fetch.js";
+import { Tutor } from "../types.js";
 
-namespace HowItWorks{
+export namespace HowItWorks{
     export async function showHowItWorks(){
         const howPlace:Element | null = document.querySelector('.item-how');
         const jsonUrl = '../../assets/json/misc.json'; 
 
-        const data:Tutor[] | null = await getData(jsonUrl);
+        const data = await getData<{how_it_works:Tutor[]}>(jsonUrl);
         if(data && howPlace){
-            display(howPlace, data);
+            display(howPlace, data.how_it_works);
         }
     }
 
@@ -26,4 +26,3 @@ namespace HowItWorks{
     }
 }
 
-export default HowItWorks;
