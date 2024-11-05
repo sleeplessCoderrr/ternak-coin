@@ -9,22 +9,8 @@
     <link rel="stylesheet" href="/dist/css/footer.css">
     <link rel="stylesheet" href="/dist/css/homepage.css">
 </head>
-<body>
-    <header>
-        <nav id="navbar">
-            <div class="nav-img">
-                <img src="/assets/resources/element/Logo.svg" alt="Ternak Coin Logo">
-            </div>
-            <div class="nav-right">
-                <ul class="nav-text">
-                    <li><a href="/pages/homepage.html">Home</a></li>
-                    <li><a href="/pages/gamesUser.html">Games</a></li>
-                    <li><a href="/pages/storeUser.html">Store</a></li>
-                    <li><a href="/pages/about_us.html">About Us</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<body data-page="home">
+    <header id="nav-place"></header>
 
     <main>
         <section id="hero-section">
@@ -42,7 +28,6 @@
         <section id="games-indo">
             <div id="carousel">
                 <div id="itemContainer" class="carousel-container">
-                    <!-- Game items will be dynamically added here -->
                 </div>                
             </div>
             <div class="text-games">
@@ -75,38 +60,7 @@
             <div class="item-testimonials"></div>
         </section>
     </main>
-
-    <footer id="fot">
-        <nav id="footer">
-            <div class="footer-img">
-                <img src="/assets/resources/element/Logo.svg" alt="">
-            </div>
-            <ul id="game">
-                <label>Game</label>
-                <li>Race</li>
-                <li>Sports</li>
-                <li>Casuals</li>
-            </ul>
-            <ul id="store">
-                <label>Store</label>
-                <li>MyPoin</li>
-                <li>Items</li>
-                <li>Product</li>
-            </ul>
-            <ul id="legal">
-                <label>Legal</label>
-                <li>Privacy</li>
-                <li>Terms</li>
-            </ul>
-        </nav>
-        <div class="copyright">
-            <p>&copy; 2020 Ternak Coin. All Rights Reserved.</p>
-        </div>
-    </footer>
     
-    <script src="/dist/js/indo_games.js"></script>
-    <script src="/dist/js/how_it_works.js"></script>
-    <script src="/dist/js/rewards.js"></script>
-    <script src="/dist/js/testimonials.js"></script>
+    <script type="module" src="../dist/js/main.js"></script>
 </body>
 </html>

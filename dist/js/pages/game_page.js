@@ -1,14 +1,12 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const game_banner_1 = __importDefault(require("../models/games/game_banner"));
-var GamePage;
+import { GameBanner } from "../models/games/game_banner.js";
+import { GameSlider } from "../models/games/game_slider.js";
+import { TopChart } from "../models/games/top_chart.js";
+export var GamePage;
 (function (GamePage) {
-    function intialize() {
-        game_banner_1.default.showBanner();
+    function initialize() {
+        GameBanner.showBanner();
+        GameSlider.showSlider();
+        TopChart.showTopChart();
     }
-    GamePage.intialize = intialize;
+    GamePage.initialize = initialize;
 })(GamePage || (GamePage = {}));
-exports.default = GamePage;

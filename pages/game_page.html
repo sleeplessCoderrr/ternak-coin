@@ -9,24 +9,8 @@
     <link rel="stylesheet" href="/dist/css/footer.css">
     <link rel="stylesheet" href="/dist/css/games.css">
 </head>
-<body>
-    <header>
-        <nav id="navbar">
-            <div class="nav-img">
-                <img src="/assets/resources/element/Logo.svg" alt="Ternak Coin Logo">
-            </div>
-            <div class="nav-right">
-                <ul class="nav-text">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/pages/games.html">Games</a></li>
-                    <li><a href="/pages/store.html">Store</a></li>
-                    <li><a href="/pages/about_guest.html">About Us</a></li>
-                </ul>
-                <button id="sign-in" onclick="window.location.href='/pages/login.html'">Sign In</button>
-                <button id="sign-up">Sign Up</button>
-            </div>
-        </nav>
-    </header>
+<body data-page="game">
+    <header id="nav-place"></header>
 
     <main>
         <section id="hero-section">
@@ -75,37 +59,7 @@
 
     </main>
 
-    <footer id="fot">
-        <nav id="footer">
-            <div class="footer-img">
-                <img src="/assets/resources/element/Logo.svg" alt="">
-            </div>
-            <ul id="game">
-                <label>Game</label>
-                <li>Race</li>
-                <li>Sports</li>
-                <li>Casuals</li>
-            </ul>
-            <ul id="store">
-                <label>Store</label>
-                <li>MyPoin</li>
-                <li>Items</li>
-                <li>Product</li>
-            </ul>
-            <ul id="legal">
-                <label>Legal</label>
-                <li>Privacy</li>
-                <li>Terms</li>
-            </ul>
-        </nav>
-        <div class="copyright">
-            <p>&copy; 2020 Ternak Coin. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <script src="/dist/js/hero-game.js"></script>
-    <script src="/dist/js/indo_games.js"></script>
-    <script src="/dist/js/bunch-of-games.js"></script>
+    <script type="module" src="../dist/js/main.js"></script>
     
 </body>
 </html>

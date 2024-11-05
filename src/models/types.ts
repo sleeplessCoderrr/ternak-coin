@@ -1,5 +1,5 @@
-export interface BannerCollection {
-    image: string[];
+export interface Banner {
+    image: string;
 }
 
 export interface Game {
@@ -8,13 +8,20 @@ export interface Game {
     reward: number;
 }
 
-export interface GameCollection {
-    games: Game[];
-}
-
 export interface Reward {
     image: string;
     title: string;
     reward: string;
     point: number;
+}
+
+export interface Tutor{
+    image: string;
+    title: string;
+    description: string;
+}
+
+export interface Testimonial{
+    image: string;
+    description: string;
 }

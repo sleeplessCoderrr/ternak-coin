@@ -1,23 +1,20 @@
-import { getData }  from "../../utils/fetch.js";
-import { Reward } from "../types.js";
-
-export namespace RewardBanner{
-    export async function showReward(){
-        const rewardPlace:Element | null = document.querySelector('.item-rewards');
-        const rewardPlace2:Element | null = document.querySelector('.item-rewardz');
+import { getData } from "../../utils/fetch.js";
+export var RewardBanner;
+(function (RewardBanner) {
+    async function showReward() {
+        const rewardPlace = document.querySelector('.item-rewards');
+        const rewardPlace2 = document.querySelector('.item-rewardz');
         const jsonUrl = '../../assets/json/reward.json';
-
-        const data = await getData<{rewards:Reward[]}>(jsonUrl);
-        if(data && rewardPlace){
+        const data = await getData(jsonUrl);
+        if (data && rewardPlace) {
             displayRewards(rewardPlace, data.rewards);
         }
-
-        if(data && rewardPlace2){
+        if (data && rewardPlace2) {
             displayRewards(rewardPlace2, data.rewards);
         }
     }
-
-    function displayRewards(container:Element, rewards:Reward[]) {
+    RewardBanner.showReward = showReward;
+    function displayRewards(container, rewards) {
         rewards.forEach(element => {
             const rewardItem = document.createElement("div");
             rewardItem.classList.add("reward-item");
@@ -29,5 +26,4 @@ export namespace RewardBanner{
             container.appendChild(rewardItem);
         });
     }
-}
-
+})(RewardBanner || (RewardBanner = {}));

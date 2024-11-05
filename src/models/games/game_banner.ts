@@ -1,21 +1,19 @@
-import { BannerCollection } from '../types';
-import { getData }  from '../../utils/fetch';
+import { Banner } from '../types.js';
+import { getData }  from '../../utils/fetch.js';
 
-namespace GameBanner {
+export namespace GameBanner {
     export async function showBanner (){
         const heroPlace : Element | null = document.querySelector('.banner');
         const jsonUrl = '../../assets/json/banner_images.json'
         let indexes : number = 0;
 
-        const data:BannerCollection | null = await getData(jsonUrl);
-        if(data && data.image){
-            slider(heroPlace, data.image, indexes);
-        } else {
-            console.log("Failed loading images")
-        }
+        const data = await getData<{images:Banner[]}>(jsonUrl);
+        if(data && heroPlace){
+            slider(heroPlace, data.images, indexes);
+        } 
     }
 
-    function slider(container:Element | null, img:string[], indexes:number) {
+    function slider(container:Element, img:Banner[], indexes:number) {
         showSlide(container, img, indexes);
 
         setInterval(() => {
@@ -24,18 +22,15 @@ namespace GameBanner {
         }, 3000);
     }
 
-    function showSlide(container:Element | null, img:string[], indexes:number) {
-        if(container){
-            container.innerHTML = '';
-            const div:Element = document.createElement('div');
-            div.classList.add('hero-game');
-            div.innerHTML = `
-                <img src="${img[indexes]}" alt="games">
-            `;
-            container.appendChild(div);
-        }
+    function showSlide(container:Element, img:Banner[], indexes:number) {
+        container.innerHTML = '';
+        const div:Element = document.createElement('div');
+        div.classList.add('hero-game');
+        div.innerHTML = `
+            <img src="${img[indexes]}" alt="games">
+        `;
+        container.appendChild(div);
     }
 
 }
 
-export default GameBanner;

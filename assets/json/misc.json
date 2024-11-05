@@ -1,48 +1,48 @@
 {
   "how_it_works": [
     {
-      "img": "../assets/resources/illustration/sign_up.svg",
+      "image": "../assets/resources/illustration/sign_up.svg",
       "title": "Sign Up",
-      "text": "Create your account"
+      "description": "Create your account"
     },
     {
-      "img": "../assets/resources/illustration/gaming.svg",
+      "image": "../assets/resources/illustration/gaming.svg",
       "title": "Play Games",
-      "text": "Choose from our exciting collection"
+      "description": "Choose from our exciting collection"
     },
     {
-      "img": "../assets/resources/illustration/coin.svg",
+      "image": "../assets/resources/illustration/coin.svg",
       "title": "Earn Coins",
-      "text": "Get rewarded for playing"
+      "description": "Get rewarded for playing"
     },
     {
-      "img": "../assets/resources/illustration/gifts.svg",
+      "image": "../assets/resources/illustration/gifts.svg",
       "title": "Redeem Rewards",
-      "text": "Exchange coins for awesome items"
+      "description": "Exchange coins for awesome items"
     }
   ],
 
   "item_list": [
-    { "link": "../assets/resources/element/Cear.png" },
-    { "link": "../assets/resources/element/Cgame.png" },
-    { "link": "../assets/resources/element/Claptop.png" },
-    { "link": "../assets/resources/element/Cphone.png" },
-    { "link": "../assets/resources/element/Cshoes.png" },
-    { "link": "../assets/resources/element/Cwatcj.png" }
+    "../assets/resources/element/Cear.png" ,
+    "../assets/resources/element/Cgame.png",
+    "../assets/resources/element/Claptop.png",
+    "../assets/resources/element/Cphone.png",
+    "../assets/resources/element/Cshoes.png",
+    "../assets/resources/element/Cwatcj.png" 
   ],
 
   "testimonials" : [
     {
-      "text": "“Ternak Coin is amazing! Fun games and real rewards. Highly recommended!”",
-      "img": "../assets/resources/element/yupen.png"
+      "description": "“Ternak Coin is amazing! Fun games and real rewards. Highly recommended!”",
+      "image": "../assets/resources/element/yupen.png"
     },
     {
-      "text": "“Hooked since day one. Great games and community. Love it!”",
-      "img": "../assets/resources/element/kayla.png"
+      "description": "“Hooked since day one. Great games and community. Love it!”",
+      "image": "../assets/resources/element/kayla.png"
     },
     {
-      "text": "“Best gaming platform ever! Fun and rewarding experience.”",
-      "img": "../assets/resources/element/mici.png"
+      "description": "“Best gaming platform ever! Fun and rewarding experience.”",
+      "image": "../assets/resources/element/mici.png"
     }
   ]
 }
