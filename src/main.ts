@@ -2,11 +2,13 @@ import { placeFooter } from "./models/footer/footer.js";
 import { placeNavbar } from "./models/navbar/navbar.js";
 import { GamePage } from "./pages/game_page.js";
 import { HomePage } from "./pages/home_page.js";
+import { Store } from "./pages/store_page.js";
 
 let isNavbarRendered = false;
 let isFooterRendered = false;
 let isGamePageInitialized = false;
 let isHomeInitialized = false;
+let isStoreInitialized = false;
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -22,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const currentPage = document.body.dataset.page;
     switch (currentPage) {
-        case "games":
+        case "game":
             if (!isGamePageInitialized) {
                 GamePage.initialize();
                 isGamePageInitialized = true;
@@ -32,6 +34,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!isHomeInitialized) {
                 HomePage.initialize();
                 isHomeInitialized = true;
+            }
+            break;
+        case "store":
+            if(!isStoreInitialized){
+                Store.initialize();
+                isStoreInitialized = true;
             }
             break;
         default:

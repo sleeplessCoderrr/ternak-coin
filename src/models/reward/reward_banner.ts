@@ -4,11 +4,16 @@ import { Reward } from "../types.js";
 export namespace RewardBanner{
     export async function showReward(){
         const rewardPlace:Element | null = document.querySelector('.item-rewards');
+        const rewardPlace2:Element | null = document.querySelector('.item-rewardz');
         const jsonUrl = '../../assets/json/reward.json';
 
         const data = await getData<{rewards:Reward[]}>(jsonUrl);
         if(data && rewardPlace){
             displayRewards(rewardPlace, data.rewards);
+        }
+
+        if(data && rewardPlace2){
+            displayRewards(rewardPlace2, data.rewards);
         }
     }
 

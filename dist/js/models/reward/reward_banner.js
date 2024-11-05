@@ -3,10 +3,14 @@ export var RewardBanner;
 (function (RewardBanner) {
     async function showReward() {
         const rewardPlace = document.querySelector('.item-rewards');
+        const rewardPlace2 = document.querySelector('.item-rewardz');
         const jsonUrl = '../../assets/json/reward.json';
         const data = await getData(jsonUrl);
         if (data && rewardPlace) {
             displayRewards(rewardPlace, data.rewards);
+        }
+        if (data && rewardPlace2) {
+            displayRewards(rewardPlace2, data.rewards);
         }
     }
     RewardBanner.showReward = showReward;

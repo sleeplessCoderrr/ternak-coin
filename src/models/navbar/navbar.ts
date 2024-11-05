@@ -14,10 +14,9 @@ function getNavbar(){
         </div>
         <div class="nav-right">
             <ul class="nav-text">
-                <li><a href="/pages/homepage.html">Home</a></li>
-                <li><a href="/pages/gamesUser.html">Games</a></li>
-                <li><a href="/pages/storeUser.html">Store</a></li>
-                <li><a href="/pages/about_us.html">About Us</a></li>
+                <li><a href="./home_page.html">Home</a></li>
+                <li><a href="./game_page.html">Games</a></li>
+                <li><a href="./store_page.html">Store</a></li>
             </ul>
         </div>
     `;
